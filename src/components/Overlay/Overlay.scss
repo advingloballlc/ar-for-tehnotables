@@ -1,0 +1,18 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 199;
+  background: rgba(#fff, .7);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all .15s ease;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

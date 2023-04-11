@@ -1,0 +1,1 @@
+export const getHrefPhone = phone => `tel:+${phone.replace(/\D/g, '')}`

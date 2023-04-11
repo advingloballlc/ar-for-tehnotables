@@ -1,0 +1,286 @@
+.discount {
+  padding: 155px 0 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-wrapper {
+    max-width: 610px;
+    width: 100%;
+    position: relative;
+  }
+  &-slider {
+    width: 100%;
+    &__item {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__pagination {
+      position: absolute;
+      left: 0;
+      bottom: 30px !important;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+      &-item {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        cursor: pointer;
+        transition: background .2s ease;
+        &.active {
+          background: #000;
+        }
+        & + & {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  &-content {
+    max-width: 815px;
+    width: 100%;
+    padding-left: 80px;
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__desc {
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      max-width: 610px;
+      margin: 0 auto 30px;
+    }
+    &__inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 0 -15px 20px;
+    }
+    &__item {
+      width: 50%;
+      padding: 0 15px;
+      &-inner {
+        background: #EEEEEE;
+      }
+    }
+    &__products-title {
+      text-align: center;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    &__products-price {
+      font-family: "IBM Plex Mono";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      &--old {
+        color: #EB5757;
+        text-decoration: line-through;
+        margin-right: 17px;
+      }
+      &--new {
+        color: #807F7F;
+      }
+    }
+    &__sale {
+      position: absolute;
+      z-index: 10;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+    &__btn {
+      &.disabled {
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+    &__btn-wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    &__btn {
+      position: relative;
+      height: 47px;
+      span {
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        top: 50%;
+        width: calc(100% - 50px);
+        transform: translateY(-50%);
+        transition: opacity .2s ease 0s;
+        &.fade {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transition: opacity .2s ease .2s;
+        }
+      }
+    }
+    &__btn-borders {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        background: #fff;
+      }
+      &::before {
+        right: 100%;
+      }
+      &::after {
+        left: 100%;
+      }
+    }
+    &__btn-border {
+      position: absolute;
+      background: #C4C4C4;
+      z-index: -1;
+      top: 50%;
+      &:nth-of-type(1) {
+        width: 100%;
+        height: 1px;
+        transform-origin: center center;
+      }
+      &:nth-of-type(2) {
+        left: 0;
+        width: 1px;
+        height: 44px;
+        transform: translateY(-100%);
+        transform-origin: center bottom;
+      }
+      &:nth-of-type(3) {
+        right: 0;
+        width: 1px;
+        height: 44px;
+        transform: translateY(-100%);
+        transform-origin: center bottom;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .discount {
+    padding-top: 140px;
+    &__slider-wrapper {
+      max-width: 455px;
+    }
+    &-slider {
+      &__item {
+        height: 705px;
+      }
+    }
+    &-content {
+      padding-left: 30px;
+      &__title {
+        max-width: 455px;
+        margin: 0 auto 15px;
+      }
+      &__desc {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .discount {
+    padding-top: 95px;
+    &__slider-wrapper {
+      display: none;
+    }
+    &-content {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      &__inner {
+        justify-content: space-between;
+      }
+      &__item {
+        width: 340px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .discount {
+    padding-top: 80px;
+    &-content {
+      &__title {
+        margin-bottom: 25px;
+      }
+      &__sale {
+        width: 105px;
+        height: 105px;
+      }
+      &__inner {
+        margin: 0 -5px 25px;
+      }
+      &__item {
+        width: 50%;
+        height: 195px;
+        padding: 0 5px;
+        &-preview {
+          height: 100%;
+        }
+      }
+      &__products-title {
+        margin-bottom: 15px;
+      }
+      &__products-price {
+        margin-bottom: 30px;
+      }
+      &__btn-borders {
+        width: 100%;
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+      &__btn-border {
+        display: none;
+      }
+      &__btn {
+        width: 100%;
+      }
+    }
+  }
+}

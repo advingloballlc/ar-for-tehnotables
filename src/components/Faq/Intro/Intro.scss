@@ -1,0 +1,217 @@
+.faq-intro {
+  padding: 40px 0 140px;
+  &__title-wrapper {
+    margin-bottom: 40px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-accordion {
+    .ReactCollapse--collapse {
+      transition: height .35s ease;
+    }
+    width: 100%;
+    &__innerinner {
+      width: 100%;
+    }
+    &__item {
+      border: 1px solid #E7E7E7;
+      padding: 0 30px;
+      &.open {
+        border-color: rgba(#000, .4);
+        .faq-intro-accordion__body-text {
+          opacity: 1;
+          transition-delay: .1s;
+        }
+        .faq-intro-accordion__head-icon svg {
+          transform: rotate(-180deg);
+        }
+      }
+      & + & {
+        margin-top: 25px;
+      }
+      @media (min-width: 1024px) {
+        transition: border-color .2s ease;
+        &:hover {
+          border-color: rgba(#000, .4);
+        }
+      }
+      @media (max-width: 1024px) {
+        transition: border-color .1s ease;
+        &:active {
+          border-color: rgba(#000, .4);
+        }
+      }
+    }
+    &__head {
+      cursor: pointer;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-text {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        max-width: 720px;
+      }
+    }
+    &__body {
+      &-text {
+        padding-bottom: 30px;
+        opacity: 0;
+        transition: opacity .2s ease 0s;
+      }
+    }
+  }
+  &-form {
+    margin-left: 70px;
+    &__inner {
+      width: 450px;
+      position: sticky;
+      top: 20px;
+      &.static {
+        position: static !important;
+      }
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__inp-wrapper {
+      margin-bottom: 20px;
+    }
+    &__label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    &__inp-inner {
+      position: relative;
+      height: 48px;
+      border: 1px solid #807F7F;
+    }
+    &__inp,
+    &__textarea {
+      font-size: 16px;
+      letter-spacing: 0.08em;
+    }
+    &__inp {
+      height: 100%;
+      padding: 0 25px;
+    }
+    &__textarea-inner {
+      border: 1px solid #807F7F;
+      position: relative;
+    }
+    &__textarea {
+      padding: 10px 25px;
+      height: 145px;
+      border: none;
+      outline: none;
+      resize: none;
+      &:focus,
+      &:active {
+        border: none;
+        outline: none;
+      }
+    }
+    &__btn-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .faq-intro {
+    &-accordion {
+      &__head {
+        &-text {
+          max-width: 500px;
+        }
+      }
+    }
+    &-form {
+      margin-left: 40px;
+      &__inner {
+        width: 380px;
+        position: static;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .faq-intro {
+    padding: 40px 0 90px;
+    &__title-wrapper {
+      margin-bottom: 30px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &-accordion {
+      width: 100%;
+      margin-bottom: 40px;
+      &__item {
+        padding: 0 20px;
+      }
+      &__head {
+        padding: 20px 0;
+        &-text {
+          max-width: 400px;
+        }
+      }
+      &__body-text {
+        padding-bottom: 20px;
+      }
+    }
+    &-form {
+      margin-left: 0;
+      width: 100%;
+      &__inner {
+        width: 100%;
+        top: 0;
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__btn-wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      &__textarea {
+        height: 100px;
+      }
+      &__btn {
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-intro {
+    padding: 30px 0 80px;
+    &-accordion {
+      &__head {
+        &-text {
+          max-width: 200px;
+          font-size: 13px
+        }
+      }
+    }
+    &-form {
+      &__btn {
+        width: 100%;
+      }
+    }
+  }
+}

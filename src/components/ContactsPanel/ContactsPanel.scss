@@ -1,0 +1,112 @@
+.contacts-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+  .ReactCollapse--collapse {
+    transition: height .45s ease;
+  }
+  &__wrapper {
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background: #fff;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px 25px 30px;
+  }
+  &__close {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    &:active span {
+      background: #133BFE;
+    }
+    span {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      top: 50%;
+      height: 2px;
+      background: #000;
+      transform-origin: center center;
+      transition: background .1s ease;
+      &:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  &__content {
+    padding: 85px 20px 40px;
+    height: calc(100% - 75px);
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    &:not(&:last-child) {
+      border-bottom: 1px solid #E7E7E7;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #000;
+    & + & {
+      margin-top: 8px;
+    }
+  }
+  &__link {
+    transition: color .1s ease;
+    &:active {
+      color: #133BFE;
+    }
+  }
+  &__social {
+    display: flex;
+    &-item {
+      width: 40px;
+      height: 40px;
+      & + & {
+        margin-left: 20px;
+      }
+    }
+    &-link {
+      border: 1.25px solid #807F7F;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      svg {
+        display: block;
+        width: 60%;
+        height: 60%;
+        fill: #000;
+      }
+    }
+  }
+}

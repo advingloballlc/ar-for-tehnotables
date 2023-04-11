@@ -1,0 +1,1 @@
+export const cutTags = str => str.replace(/( |<([^>]+)>)/ig, ' ')

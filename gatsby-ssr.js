@@ -1,0 +1,54 @@
+import React from 'react'
+
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Thin.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="montserratThin"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="montserratRegular"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="montserratMedium"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="montserratSemiBold"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-ExtraBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="montserratExtraBold"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/IBMPlexMono-Medium.woff"
+      as="font"
+      type="font/woff"
+      crossOrigin="anonymous"
+      key="IBMPlexMonoMedium"
+    />,
+  ])
+}

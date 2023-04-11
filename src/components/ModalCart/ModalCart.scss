@@ -1,0 +1,122 @@
+.modal-cart {
+  max-width: 990px;
+  padding: 95px 115px 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .carousel__button.is-close {
+    opacity: 0;
+    animation: visible .3s ease 1.2s 1 forwards !important;
+  }
+  &__icon {
+    width: 88px;
+    height: 88px;
+    position: relative;
+    margin-bottom: 40px;
+    & > svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+    }
+  }
+  &__check {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    transform: translate(10%, -10%);
+  }
+  &__title {
+    margin-bottom: 80px;
+    max-width: 545px;
+  }
+  &__btns {
+    display: flex;
+    width: 100%;
+    margin: -10px;
+  }
+  &__btn-wrapper {
+    width: 50%;
+    padding: 10px;
+    &:nth-child(1) {
+      .modal-cart__btn {
+        span {
+          color: #000
+        }
+        @media (min-width: 1025px) {
+          &:hover {
+            background: #133BFE;
+            span {
+              color: #fff;
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            background: #133BFE;
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .modal-cart__btn {
+        background: #133BFE;
+        @media (min-width: 1025px) {
+          &:hover {
+            background: #fff;
+            span {
+              color: #000;
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            background: #fff;
+            span {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    background: #fff;
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 991px) {
+  .modal-cart {
+    padding: 95px 90px 95px;
+    max-width: 850px;
+    &__btns {
+      flex-wrap: wrap;
+    }
+    &__btn-wrapper {
+      width: 100%;
+    }
+    &__btn {
+      width: 310px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-cart {
+    padding: 80px 20px 60px;
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__btn {
+      width: 280px;
+    }
+  }
+}

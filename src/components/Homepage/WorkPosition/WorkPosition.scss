@@ -1,0 +1,144 @@
+.work-position {
+  padding: 155px 0;
+  &__title-wrapper {
+    max-width: 465px;
+    margin: 0 auto 250px;
+    text-align: center;
+  }
+  &__clock {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 375px;
+    height: 375px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-arrow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4px;
+      height: 142px;
+      transform: translate(-50%, -100%);
+      transform-origin: center bottom;
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    margin: 0 -15px;
+  }
+  &__item {
+    width: 50%;
+    padding: 0 15px;
+    &-inner {
+      height: 100%;
+      position: relative;
+    }
+    &-photo {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-method {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 2;
+      transform: translate(-50%, -65%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-desc {
+      color: #807F7F;
+      margin-bottom: 18px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    &-percentage {
+      background: #FFFFFF;
+      border: 1px solid #807F7F;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .work-position {
+    padding: 140px 0;
+    &__title-wrapper {
+      margin-bottom: 265px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .work-position {
+    padding: 95px 0;
+    &__title-wrapper {
+      margin-bottom: 185px;
+    }
+    &__clock {
+      width: 285px;
+      height: 285px;
+      &-arrow {
+        height: 110px;
+      }
+    }
+    &__inner {
+      margin: 0 -10px;
+    }
+    &__item {
+      padding: 0 10px;
+      &-percentage {
+        width: 95px;
+        height: 95px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .work-position {
+    padding: 80px 0;
+    &__title-wrapper {
+      margin-bottom: 130px;
+    }
+    &__clock {
+      width: 130px;
+      height: 130px;
+      &-arrow {
+        height: 50px;
+      }
+    }
+    &__item {
+      height: 280px;
+    }
+  }
+}

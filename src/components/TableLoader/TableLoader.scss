@@ -1,0 +1,9 @@
+#spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#spinner__logo-fill {
+  transform: translateY(100%);
+  transition: transform .5s ease;
+}

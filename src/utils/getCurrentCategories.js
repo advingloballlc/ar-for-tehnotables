@@ -1,0 +1,1 @@
+export const getCurrentCategories = (categories, lang) => categories.filter(category => category.slug !== 'uncategorized' && category.lang === lang)

@@ -1,0 +1,66 @@
+.about-inovation {
+  padding-bottom: 155px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &__slider-nav {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-btn {
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    transition: opacity .2s ease;
+    & + & {
+      margin-left: 30px;
+    }
+    &.swiper-button-disabled {
+      opacity: .4;
+      pointer-events: none;
+    }
+    @media (min-width: 1024px) {
+      &:hover svg {
+        stroke: #133BFE;
+      }
+    }
+    @media (max-width: 1024px) {
+      &:active svg {
+        stroke: #133BFE;
+      }
+    }
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      stroke: #000;
+      transition: stroke .2s ease;
+    }
+  }
+  &-slider {
+    &__item {
+      height: auto;
+      &-inner {
+        background: #eee;
+        padding: 40px 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform-origin: center top;
+      }
+      &-title {
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

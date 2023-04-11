@@ -1,0 +1,319 @@
+.intro-login {
+  display: flex;
+  &-photo {
+    width: 50%;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    &__inner {
+      max-width: 480px;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  &__title-wrapper {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  &__social {
+    width: 100%;
+    &-btns {
+      transition: opacity .2s ease;
+      &.disabled {
+        opacity: .6;
+        pointer-events: none;
+      }
+    }
+    &-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 10px 5px;
+      @media (min-width: 1024px) {
+        transition: background .2s ease;
+      }
+      @media (max-width: 1024px) {
+        transition: background .2s ease;
+      }
+      &:nth-of-type(1) {
+        background: #3B5998;
+        @media (min-width: 1024px) {
+          &:hover {
+            background: darken(#3B5998, 5%)
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            background: darken(#3B5998, 5%)
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        background: #4285F4;
+        @media (min-width: 1024px) {
+          &:hover {
+            background: darken(#4285F4, 5%)
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            background: darken(#4285F4, 5%)
+          }
+        }
+      }
+      & + & {
+        margin-top: 15px;
+      }
+      &-icon {
+        display: block;
+        margin-right: 15px;
+        width: 32px;
+        height: 32px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-text {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #807F7F;
+    &:nth-of-type(1) {
+      margin-bottom: 15px;
+    }
+    &:nth-of-type(2) {
+      margin-top: 15px;
+    }
+  }
+  &__social {
+    margin-bottom: 40px;
+  }
+  &__label {
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__inp-wrapper {
+    margin-bottom: 25px;
+  }
+  &__inp-inner {
+    border: 1px solid #807F7F;
+    height: 48px;
+    position: relative;
+  }
+  &__inp {
+    padding: 0 10px;
+    height: 100%;
+    font-size: 16px;
+  }
+  &__btn-wrapper {
+    width: 100%;
+  }
+  &__btn {
+    width: 100%;
+  }
+  &__links {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    &--login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--registration,
+    &--recovery {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__link {
+    @media (min-width: 1024px) {
+      transition: color .2s ease;
+    }
+    @media (max-width: 1024px) {
+      transition: color .1s ease;
+    }
+    &--login {
+      color: #000;
+      @media (min-width: 1024px) {
+        &:hover {
+          color: #133BFE;
+        }
+      }
+      @media (max-width: 1024px) {
+        &:active {
+          color: #133BFE;
+        }
+      }
+      & + & {
+        margin-top: 15px;
+      }
+    }
+    &--registration,
+    &--recovery {
+      color: #133BFE;
+      @media (min-width: 1024px) {
+        &:hover {
+          color: #000;
+        }
+      }
+      @media (max-width: 1024px) {
+        &:active {
+          color: #000;
+        }
+      }
+    }
+  }
+  &__text {
+    display: block;
+    margin-right: 5px;
+  }
+  &__link-back-wrapper {
+    margin-top: 25px;
+    text-align: center;
+  }
+  &__link-back {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #133BFE;
+    @media (min-width: 1024px) {
+      transition: color .2s ease;
+      &:hover {
+        color: #000;
+      }
+    }
+    @media (max-width: 1024px) {
+      transition: color .2s ease;
+      &:active {
+        color: #000;
+      }
+    }
+  }
+  &__sent {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+      transform: translateY(100%);
+      animation: .5s ease .2s forwards hide;
+    }
+    &-icon {
+      width: 190px;
+      height: 190px;
+      position: relative;
+      margin-bottom: 50px;
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 45%;
+        height: 4px;
+        border-radius: 10px;
+        background: #fff;
+        &:nth-of-type(1) {
+          transform: translate(-35%, -740%) rotate(45deg) scaleX(0);
+          transform-origin: left center;
+          animation: timesBigOne .5s ease .8s 1 forwards;
+        }
+        &:nth-of-type(2) {
+          transform-origin: right center;
+          transform: translate(-65%, -760%) rotate(-45deg) scaleX(0);
+          animation: timesBigTwo .5s ease .9s 1 forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes hide {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1366px) {
+  .intro-login {
+    &-content {
+      padding: 110px 70px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .intro-login {
+    &-photo {
+      display: none;
+    }
+    &-content {
+      width: 100%;
+      padding: 80px 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-login {
+    &-content {
+      padding: 30px 20px 80px;
+    }
+    &__title-wrapper {
+      margin-bottom: 25px;
+    }
+    &__title,
+    &__desc {
+      text-align: left;
+    }
+    &__social {
+      margin-bottom: 30px;
+    }
+    &__inp-wrapper {
+      margin-bottom: 20px;
+    }
+    &__links {
+      margin-top: 55px;
+    }
+  }
+}

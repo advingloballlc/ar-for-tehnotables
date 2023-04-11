@@ -1,0 +1,1 @@
+export const fieldChange = e => e.currentTarget.nextElementSibling.classList.add('focused')

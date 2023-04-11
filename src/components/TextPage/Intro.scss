@@ -1,0 +1,29 @@
+.text-page {
+  padding: 40px 0 140px;
+  .title-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .text-page {
+    .title-wrapper {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .text-page {
+    padding: 40px 0 90px;
+    .title-wrapper {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .text-page {
+    padding: 30px 0 80px;
+  }
+}

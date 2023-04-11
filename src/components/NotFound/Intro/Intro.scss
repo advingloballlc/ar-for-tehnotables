@@ -1,0 +1,132 @@
+.error-intro {
+  .container {
+    height: 100%;
+  }
+  &__title {
+    width: 100%;
+    transform: translateY(-30%);
+    text {
+      text-transform: uppercase;
+      animation: stroke 5s 1;
+      stroke-width: 2;
+      font-weight: 700;
+      stroke: #fff;
+      fill: #fff;
+      font-size: 300px;
+    }
+  }
+  &__inner {
+    position: relative;
+    justify-content: center;
+    height: 100%;
+  }
+  &__front {
+    pointer-events: none;
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 25%;
+    bottom: -6%;
+  }
+  &__btn {
+    transform: translateY(-110%);
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 225px;
+    height: 70px;
+    white-space: nowrap;
+    background: #133BFE;
+    visibility: hidden;
+    @media (min-width: 1024px) {
+      &:hover {
+        background: #fff;
+        span {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+@keyframes stroke {
+  0%   {
+    fill: rgba(#fff,0); stroke: rgba(#fff,1);
+    stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+  }
+  70%  {fill: rgba(#fff,0); stroke: rgba(#fff,1); }
+  80%  {fill: rgba(#fff,0); stroke: rgba(#fff,1); stroke-width: 2; }
+  100% {
+    fill: rgba(#fff,1); stroke: rgba(#fff,1);
+    stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .error-intro {
+    &__front {
+      bottom: 0;
+    }
+    &__title {
+      text {
+        font-size: 340px;
+      }
+    }
+    &__btn {
+      transform: translateY(-90%);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .error-intro {
+    &__front {
+      bottom: -5%;
+      width: 75%;
+      left: 20%;
+    }
+    &__title {
+      text {
+        font-size: 390px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .error-intro {
+    &__front {
+      width: 100%;
+      left: 10%;
+    }
+    &__btn {
+      transform: translateY(0)
+    }
+    &__title {
+      height: 200px;
+      text {
+        font-size: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px)  {
+  .error-intro {
+    &__inner {
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+    &__front {
+      left: 0;
+      bottom: 0;
+      height: 50%;
+    }
+    &__title {
+      transform: translateY(0);
+      text {
+        font-size: 610px;
+      }
+    }
+  }
+}
