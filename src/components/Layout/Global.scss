@@ -75,11 +75,13 @@ body {
     .single-product-intro {
       background: #ECF5FF;
     }
+    
     .single-product-intro__slider-inner > span {
       display: none;
     }
     .single-product-intro__slider-pagination-item {
       border: 1px solid #CDE1FA;
+      overflow: inherit;
       svg {
         fill: #000;
       }

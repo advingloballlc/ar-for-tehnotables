@@ -1303,3 +1303,27 @@
     }
   }
 }
+.ar{
+&-thumb{
+  display:none;
+  background-color:#000000;
+}
+
+&-qr{
+  background-color: #000000;
+  color: #fff;
+  padding: 72px;
+  padding-bottom: 10px;
+}
+&-text{
+  font-family: 'Montserrat';
+  color:#fff;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+&-button{
+  margin-left: 10px;
+}}

@@ -49,6 +49,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       type="font/woff"
       crossOrigin="anonymous"
       key="IBMPlexMonoMedium"
-    />,
+    />
   ])
+  
 }

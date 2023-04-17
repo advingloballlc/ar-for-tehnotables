@@ -1,12 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import ReactModal from 'react-modal'
 
 import SingleProductTabs from './SingleProductTabs'
 import SingleProductSlider from './SingleProductSlider'
 import SingleProductDetails from './SingleProductDetails'
 
+
+import { Fancybox } from '@fancyapps/ui'
+import '@fancyapps/ui/dist/fancybox.css'
+
+  import wpn_table from '../../../images/qr/wpn__table.png'
+  import GamingBlack from '../../../images/qr/gaming_table_black.png'
+  import GamingWhite from '../../../images/qr/gaming_table_white.png'
+  import childrenTableBlue from '../../../images/qr/children_table_blue.png'
+  import childrenTablePink from '../../../images/qr/children_table_pink.png'
+  import strongWoodWhiteNut from '../../../images/qr/strong__wood_white_nut.png'
+  import strongWoodBlackNut from '../../../images/qr/strong_wood_black_nut.png'
+  import strongDspWhite from '../../../images/qr/strong_dsp_white.png'
+  import strongMdfOakWhite from '../../../images/qr/strong_mdf_oak_white.png'
+  import strongMdfOakBlack from '../../../images/qr/strong_mdf_oak_black.png'
+  import strongMdfLanselott from '../../../images/qr/lanselott.png'
+
 const SingleProductBox = ({ 
+  slug,
   detailsTitle,
   productDetailsImg,
   productDetails,
@@ -23,9 +41,11 @@ const SingleProductBox = ({
   productDescriptionChildrenStyle,
   productDescriptionGamingStyle,
   productTypeTemplate,
-  reviewForm
+  reviewForm, color
 }) => {
-  let [ isMobile, setIsMobile ] = useState(false)
+  let [ isMobile, setIsMobile ] = useState(false);
+  
+  const activeColor = color && color.some(cl => cl.isActive) && color.filter(cl => cl.isActive)[0].color[1];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -36,8 +56,51 @@ const SingleProductBox = ({
     })
   }, [])
 
+
+
   return (
     <div className="single-product-content__box single-product-content-box">
+   
+      <div className="backdrop" >     
+     <div id="ar-wpn" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+     <img className='ar-qr' src={wpn_table}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>   
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-gaming-black" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+     <img className='ar-qr' src={GamingBlack}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-gaming-white" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={GamingWhite}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" > 
+     <div id="ar-children-pink" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+       <img className='ar-qr' src={childrenTablePink}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>    
+</div>
+</div>
+
+<div className="backdrop" > 
+     <div id="ar-children-blue" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+       <img className='ar-qr' src={childrenTableBlue}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>    
+</div>
+</div>
+
+</div>
       <SingleProductTabs 
         productTabs={productTabs} 
         reviewBtn={reviewBtn} 
@@ -54,8 +117,7 @@ const SingleProductBox = ({
       />
       { !isMobile && interiorGallery && <SingleProductSlider 
         interiorGalleryTitle={interiorGalleryTitle} 
-        interiorGallery={interiorGallery}
-      /> }
+        interiorGallery={interiorGallery} />}
       { productDetails && <SingleProductDetails 
         detailsTitle={detailsTitle} 
         productDetailsImg={productDetailsImg}
