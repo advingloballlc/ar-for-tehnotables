@@ -3,7 +3,8 @@ require('dotenv').config({
 })
 
 module.exports = {
-  siteMetadata: {
+  pathPrefix: "ar-for-tehnotables",
+   siteMetadata: {
     title: `Default title for Tehnotable web site`,
     description: `Default description for Tehnotable web site`,
     author: `Andrew`,
