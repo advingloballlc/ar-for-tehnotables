@@ -16,6 +16,7 @@ const ConfiguratorOptionsTwoDrawersKind = ({
 }) => {
   const [ isOpen, setIsOpen ] = useState(false)
 
+
   const activeMaterial = tableTopMaterial.filter(item => item.isActive)[0].value,
         activeDrawersKind = twoDrawersKind.filter(item => item.isActive)[0].value,
         activeFrameCount = frameCount.filter(item => item.isActive)[0].value,

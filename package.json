@@ -29,8 +29,8 @@
     "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-source-wordpress": "^6.6.0",
+    "gatsby-transformer-obfuscator": "^1.3.0",
     "gatsby-transformer-sharp": "^4.6.0",
-    "gh-pages": "^5.0.0",
     "google-map-react": "^2.1.10",
     "gsap": "^3.9.1",
     "normalize.css": "^8.0.1",
@@ -61,6 +61,7 @@
     "three": "^0.138.3"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "prettier": "^2.5.1"
   },
   "keywords": [
@@ -68,7 +69,8 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "build": "GENERATE_SOURCEMAP=false gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",

@@ -3,7 +3,7 @@ require('dotenv').config({
 })
 
 module.exports = {
-  pathPrefix: "ar-for-tehnotables",
+  pathPrefix: "/ar-for-tehnotables",
    siteMetadata: {
     title: `Default title for Tehnotable web site`,
     description: `Default description for Tehnotable web site`,
@@ -22,6 +22,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
@@ -147,7 +148,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ] ,
-  flags: {
-    DEV_SSR: true
-  },
+
 }

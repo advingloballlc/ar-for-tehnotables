@@ -1307,13 +1307,20 @@
 &-thumb{
   display:none;
   background-color:#000000;
+  &-children{
+    display: none;
+    background-color: #FFF;
+  }
 }
 
 &-qr{
   background-color: #000000;
   color: #fff;
   padding: 72px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
+  &-children{
+    background-color: #FFF;
+  }
 }
 &-text{
   font-family: 'Montserrat';
@@ -1323,6 +1330,16 @@
   line-height: 34px;
   text-align: center;
   margin-bottom: 40px;
+   &-children{ 
+    font-family: 'Montserrat';
+    color:#fff;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000000;
+  }
 }
 &-button{
   margin-left: 10px;

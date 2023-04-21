@@ -527,6 +527,18 @@
         height: 70%;
       }
        
+    } 
+    
+  &_ar-item-children{ 
+     margin-top: 8px;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #CDE1FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
     }
     &_ar-item{
       margin-top: 8px;
@@ -537,6 +549,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+  
     & + & {  
       svg {
       fill: #fff;

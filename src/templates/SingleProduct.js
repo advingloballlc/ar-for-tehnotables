@@ -294,6 +294,7 @@ const SingleProduct = ({ pageContext, data }) => {
   }
 
   const checkColorCode = event => setColorCode(event.currentTarget.value)
+ 
 
   const changeColorCode = () => setIsVisibleColorCode(prev => !prev)
 

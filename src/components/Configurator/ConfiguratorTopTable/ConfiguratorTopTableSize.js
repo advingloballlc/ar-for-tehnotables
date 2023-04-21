@@ -24,7 +24,7 @@ const ConfiguratorTopTableSize = ({
   const [ isOpen, setIsOpen ] = useState(false)
 
   const activeTableTopMaterial = tableTopMaterial.filter(item => item.isActive)[0].value
-  
+
   return (
     <div className="configurator-filter__subitem configurator-filter__size">
       <div 

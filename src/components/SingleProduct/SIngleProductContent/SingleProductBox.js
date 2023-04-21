@@ -85,18 +85,66 @@ const SingleProductBox = ({
 </div>
 
 <div className="backdrop" > 
-     <div id="ar-children-pink" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
-       <img className='ar-qr' src={childrenTablePink}/>
+     <div id="ar-children-pink" className='ar-thumb-children' style={{color: '#fffffff', width: 450, height: 450}}>
+       <img className='ar-qr-children' src={childrenTablePink}/>
       <button className='ar-button' onClick={() => Fancybox.close()}></button>
-      <p className='ar-text'>TRY ON!</p>    
+      <p className='ar-text-children'>TRY ON!</p>    
 </div>
 </div>
 
 <div className="backdrop" > 
-     <div id="ar-children-blue" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
-       <img className='ar-qr' src={childrenTableBlue}/>
+     <div id="ar-children-blue" className='ar-thumb-children' style={{color: '#fffffff', width: 450, height: 450}}>
+       <img className='ar-qr-children' src={childrenTableBlue}/>
       <button className='ar-button' onClick={() => Fancybox.close()}></button>
-      <p className='ar-text'>TRY ON!</p>    
+      <p className='ar-text-children'>TRY ON!</p>    
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-wood-oak-white" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongWoodWhiteNut}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-wood-oak-black" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongWoodWhiteNut}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-nut-oak-black" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongWoodBlackNut}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-nut-oak-white" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongWoodWhiteNut}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-strong-dsp" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongDspWhite}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
+</div>
+</div>
+
+<div className="backdrop" >  
+     <div id="ar-strong-mdf" className='ar-thumb' style={{color: '#000000', width: 450, height: 450}}>
+    <img className='ar-qr' src={strongMdfLanselott}/>
+      <button className='ar-button' onClick={() => Fancybox.close()}></button>
+      <p className='ar-text'>TRY ON!</p>
 </div>
 </div>
 
