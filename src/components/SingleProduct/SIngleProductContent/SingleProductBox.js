@@ -148,7 +148,7 @@ const SingleProductBox = ({
 </div>
 </div>
 
-</div>
+</div> 
       <SingleProductTabs 
         productTabs={productTabs} 
         reviewBtn={reviewBtn} 

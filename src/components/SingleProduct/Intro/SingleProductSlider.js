@@ -116,15 +116,13 @@ const SingleProductSlider = ({
                 // key={item.id}
                 onClick={e => { 
 
-                  if (!isBrowser) {
-                    return
-                  }
+                 
 
-                  else {
+                  if(isBrowser) {
 
-                   
+                  //  console.log("Window is ready")
 
-                  if(!isMobile){
+                  if(!isMobile){ 
 
                     if(slug === 'work-station-wpn'){   
                          Fancybox.show([
@@ -314,7 +312,7 @@ const SingleProductSlider = ({
 
            }     
               >  
-                <svg width='120px'height='100px'><use href={`${sprite}#ar-icon`}></use></svg> 
+                <svg ><use href={`${sprite}#ar-icon`}></use></svg> 
             </div >}
        
         </div>

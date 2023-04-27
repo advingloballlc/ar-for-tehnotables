@@ -3,12 +3,12 @@ require('dotenv').config({
 })
 
 module.exports = {
-  pathPrefix: "/ar-for-tehnotables",
+ 
    siteMetadata: {
     title: `Default title for Tehnotable web site`,
     description: `Default description for Tehnotable web site`,
     author: `Andrew`,
-    siteUrl: `https://github.com/advingloballlc/ar-for-tehnotables.git`,
+    siteUrl: `https://github.com/peopleh8/Tehnotable.git`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
