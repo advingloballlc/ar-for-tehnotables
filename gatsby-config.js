@@ -3,8 +3,7 @@ require('dotenv').config({
 })
 
 module.exports = {
- 
-   siteMetadata: {
+  siteMetadata: {
     title: `Default title for Tehnotable web site`,
     description: `Default description for Tehnotable web site`,
     author: `Andrew`,
@@ -22,7 +21,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
@@ -147,6 +145,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-  ] ,
-
+  ],
 }
